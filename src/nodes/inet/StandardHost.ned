@@ -19,6 +19,8 @@
 
 package inet.nodes.inet;
 
+import inet.applications.generic.IPTrafGen;
+import inet.applications.generic.IPTrafSink;
 import inet.applications.pingapp.PingApp;
 import inet.applications.sctpapp.SCTPApp;
 import inet.applications.tcpapp.TCPApp;

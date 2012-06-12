@@ -126,9 +126,12 @@ void UDPVideoStreamCliWithTrace::receiveStream(UDPVideoStreamPacket *pkt)
     long frameNumber = pkt->getFrameNumber();
 	FrameType frameType = FrameType(pkt->getFrameType());
 	long encodingNumber = frameEncodingNumber(frameNumber, numBFrames, frameType);
+	//double tempoFrame = pkt->getFrameTime();
+	//double tempoChegada = pkt->getArrivalTime().dbl(); // pkt->getArrivalTime().dbl();
+	//double tempoTotal = tempoFrame + tempoChegada;
 		
 	fprintf(this->trace_out, "%d\n", pkt->getFrameNumber());
-
+	//fprintf(this->trace_out, "%.6f\n", tempoTotal);
 /*
 	switch(frameType) // My CODE
 	{
